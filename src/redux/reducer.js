@@ -9,7 +9,7 @@ export const rootReducer = (state = initialState.lastViews, action) => {
     case ADD_USER_VIEW:
       // console.log(action.payload);
       // console.log(state);
-      if (state == null) {
+      if (state === null) {
         return [...state, action.payload];
       }
       let addedItem = state.find((c) => c.id === action.payload.id);
