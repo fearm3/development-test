@@ -68,15 +68,15 @@ const Detail = () => {
 
             <hr />
             {userPost?.length !== 0 ? (
-              userPost?.map((post) => (
-                <>
+              userPost?.map((post, index) => (
+                <Fragment key={index}>
                   <Typography gutterBottom variant="h5" component="div">
                     {post?.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     {post?.body}
                   </Typography>
-                </>
+                </Fragment>
               ))
             ) : (
               <Typography variant="body2" color="text.secondary">
