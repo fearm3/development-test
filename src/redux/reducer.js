@@ -24,7 +24,7 @@ export const rootReducer = (state = initialState, action) => {
         return { lastViews: [...newState] };
       }
     case GET_VIEWS:
-      return state;
+      return { lastViews: [...action.payload] };
 
     default: {
       return state;
