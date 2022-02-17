@@ -33,7 +33,6 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -81,15 +80,12 @@ const Home = () => {
     navigate(`detail/${row.id}`);
   };
   const fetchUsers = async (page) => {
-    setLoading(true);
-
     const response = await axios.get(
       `https://gorest.co.in/public/v2/users?page=${page}`
     );
 
     setData(response.data);
 
-    setLoading(false);
     // console.log(page);
     // console.log(response.data);
   };
