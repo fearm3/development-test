@@ -23,7 +23,6 @@ export const addUserViews = (payload) => {
 export const getViews = () => {
   return (dispatch) => {
     const data = JSON.parse(localStorage.getItem("lastView"));
-    console.log(data);
     dispatch(getView(data));
   };
 };

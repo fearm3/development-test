@@ -20,7 +20,7 @@ export const rootReducer = (state = initialState.lastViews, action) => {
         const newState = [action.payload, ...state].slice(0, 5);
 
         localStorage.setItem("lastView", JSON.stringify(newState));
-        console.log(newState);
+        // console.log(newState);
         return newState;
       }
     case GET_VIEWS:
