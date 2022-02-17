@@ -12,8 +12,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Detail = () => {
   const { id } = useParams();
-  const [userData, setUserData] = useState();
-  const [userPost, setUserPost] = useState();
+  const [userData, setUserData] = useState("");
+  const [userPost, setUserPost] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const fetchUsersData = async (id) => {

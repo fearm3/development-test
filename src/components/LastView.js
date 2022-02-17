@@ -31,10 +31,10 @@ const LastView = () => {
       >
         Viewed Last 5 Employees
       </Typography>
-      {lastUserViews?.length === 0 ? (
+      {lastUserViews?.lastViews?.length === 0 ? (
         <h3 style={{ marginTop: "5rem", color: "#000" }}>No added users</h3>
       ) : (
-        lastUserViews?.map((item) => {
+        lastUserViews?.lastViews.map((item) => {
           //   console.log("item from lastView", item);
 
           return (

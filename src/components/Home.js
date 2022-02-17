@@ -76,6 +76,7 @@ const Home = () => {
   ];
 
   const handleButtonClick = (row) => {
+    console.log(row);
     dispatch(addUserViews(row));
     navigate(`detail/${row.id}`);
   };
