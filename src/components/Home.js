@@ -140,6 +140,7 @@ const Home = () => {
           persistTableHead
           paginationServer
           paginationTotalRows={10000}
+          rowPerPage={20}
           onChangePage={handlePageChange}
           theme="dark"
           striped
